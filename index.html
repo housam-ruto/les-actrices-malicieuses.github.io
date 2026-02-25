@@ -1,99 +1,72 @@
+
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StreamHub | Votre Cinéma Maison</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+    <title>Mi Espacio GitHub</title>
     <style>
-        :root {
-            --primary: #e50914;
-            --dark: #141414;
-            --light: #ffffff;
-        }
+        /* Estilo general del fondo */
         body {
-            background-color: var(--dark);
-            color: var(--light);
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #000000; /* Fondo negro */
+            color: #ffffff;           /* Texto general blanco */
             margin: 0;
-        }
-        header {
-            padding: 20px 5%;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, transparent 100%);
-        }
-        .logo { color: var(--primary); font-size: 2rem; font-weight: bold; text-decoration: none; }
-        
-        .hero {
-            height: 70vh;
-            display: flex;
-            align-items: center;
-            padding: 0 5%;
-            background: linear-gradient(to right, rgba(0,0,0,0.8), transparent), url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-        }
-        .hero-content h1 { font-size: 3.5rem; margin-bottom: 10px; }
-        .btn-play {
-            background-color: var(--light);
-            color: black;
-            padding: 10px 25px;
-            border: none;
-            border-radius: 4px;
-            font-weight: bold;
-            cursor: pointer;
-            text-decoration: none;
+            height: 100vh;
+            font-family: 'Segoe UI', Arial, sans-serif;
         }
 
-        .video-grid {
-            padding: 40px 5%;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
+        .contenedor {
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
         }
-        .video-card {
-            transition: transform 0.3s;
-            cursor: pointer;
+
+        h1 {
+            margin-bottom: 20px;
+            font-weight: 300;
+            letter-spacing: 2px;
         }
-        .video-card:hover { transform: scale(1.05); }
-        .video-card img { width: 100%; border-radius: 4px; }
+
+        /* CUADRO PARA INTRODUCIR TEXTO EN BLANCO */
+        #cajaTexto {
+            width: 100%;
+            height: 200px;
+            background-color: #111111; /* Un gris casi negro para que se vea el borde */
+            color: #ffffff;           /* TEXTO EN BLANCO */
+            border: 1px solid #333333; /* Borde sutil */
+            padding: 20px;
+            font-size: 1.2rem;
+            border-radius: 12px;
+            outline: none;
+            resize: none;             /* Evita que se cambie el tamaño manualmente */
+            box-sizing: border-box;   /* Ajuste perfecto de padding */
+            transition: border-color 0.3s ease;
+        }
+
+        /* Efecto cuando haces clic para escribir */
+        #cajaTexto:focus {
+            border-color: #ffffff;    /* El borde se vuelve blanco al escribir */
+        }
+
+        .instruccion {
+            color: #666666;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <a href="#" class="logo">STREAMHUB</a>
-        <nav>
-            <span>Accueil</span>
-            <span style="margin-left: 20px;">Séries</span>
-            <span style="margin-left: 20px;">Films</span>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Le Film du Moment</h1>
-            <p>Découvrez l'aventure la plus épique de l'année.</p>
-            <a href="#player" class="btn-play">▶ Lecture</a>
-        </div>
-    </section>
-
-    <section class="video-grid">
-        <div class="video-card">
-            <img src="https://via.placeholder.com/300x450" alt="Film 1">
-            <p>Titre du Film 1</p>
-        </div>
-        <div class="video-card">
-            <img src="https://via.placeholder.com/300x450" alt="Film 2">
-            <p>Titre du Film 2</p>
-        </div>
-        </section>
-
-    <div id="player" style="padding: 5% text-align: center;">
-        <h2>Lecteur Vidéo</h2>
-        <iframe width="80%" height="450" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    <div class="contenedor">
+        <h1>T'aime les actrices ?</h1>
+        
+        <textarea id="cajaTexto" placeholder="Escribe tu mensaje..."></textarea>
+        
+        <p class="instruccion">Todo lo que escribas aparecerá en blanco.</p>
     </div>
 
 </body>
